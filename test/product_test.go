@@ -8,17 +8,17 @@ import (
 )
 
 func TestNewProduct(t *testing.T) {
-	product, err := entity.NewProduct("phone", 100)
+	product, err := entity.NewProduct("phone", 100.00)
 	assert.Nil(t, err)
 	assert.NotNil(t, product)
 	assert.NotEmpty(t, product.ID)
 	assert.NotEmpty(t, product.Name)
 	assert.Equal(t, "phone", product.Name)
-	assert.Equal(t, 100, product.Price)
+	assert.Equal(t, 100.00, product.Price)
 }
 
 func TestProductWhenNameIsRequired(t *testing.T) {
-	product, err := entity.NewProduct("", 100)
+	product, err := entity.NewProduct("", 100.00)
 	assert.Nil(t, product)
 	assert.NotNil(t, err)
 	assert.Equal(t, entity.ErrNameIsRequired, err)
