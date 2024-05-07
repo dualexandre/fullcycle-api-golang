@@ -5,3 +5,17 @@ Content-Type: application/json
     "name": "Phone",
     "price": 1500.00
 }
+
+###
+
+GET http://localhost:8000/products/0fb74d4f-2e12-45e7-a20c-923a1a694e0a
+
+###
+
+PUT http://localhost:8000/products/0fb74d4f-2e12-45e7-a20c-923a1a694e0a
+Content-Type: application/json
+
+{
+    "name": "Phone Updated",
+    "price": 1700.00
+}
