@@ -1,4 +1,5 @@
 POST http://localhost:8000/products
+Authorization: /users/generate_token -> route
 Content-Type: application/json
 
 {
@@ -9,14 +10,17 @@ Content-Type: application/json
 ###
 
 GET http://localhost:8000/products?page=1&limit=2
+Authorization: /users/generate_token -> route
 
 ###
 
 GET http://localhost:8000/products/0fb74d4f-2e12-45e7-a20c-923a1a694e0a
+Authorization: /users/generate_token -> route
 
 ###
 
 PUT http://localhost:8000/products/0fb74d4f-2e12-45e7-a20c-923a1a694e0a
+Authorization: /users/generate_token -> route
 Content-Type: application/json
 
 {
