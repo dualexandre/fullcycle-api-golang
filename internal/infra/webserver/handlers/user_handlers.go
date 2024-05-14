@@ -30,7 +30,7 @@ func NewUserHandler(userDB database.UserInterface, jwt *jwtauth.JWTAuth, JwtExpi
 }
 
 // GetJWT godoc
-// @Sumary Get a User JWT
+// @Summary Get a User JWT
 // @Description Get a User JWT
 // @Tags users
 // @Accept json
@@ -73,7 +73,7 @@ func (h *UserHandler) GetJWT(w http.ResponseWriter, r *http.Request) {
 }
 
 // Create user godoc
-// @Sumary Create User
+// @Summary Create User
 // @Description Route for creating Users
 // @Tags users
 // @Accept json
